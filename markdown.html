@@ -5,27 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="markdown.css">
 </head>
 
 <body>
-    <textarea name="editor" id="editor" cols="30" rows="10">
+<div class="container">
+
+<div>
+
+<textarea name="editor" id="editor">
 # Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
-  
+    
 Heres some code, `<div></div>`, between 2 backticks.
 
 ```
 // this is multi-line code:
 
 function anotherExample(firstLine, lastLine) {
-  if (firstLine == '```' && lastLine == '```') {
+    if (firstLine == '```' && lastLine == '```') {
     return multiLineCode;
-  }
+    }
 }
 ```
-  
+    
 You can also make text **bold**... whoa!
 Or _italic_.
 Or... wait for it... **_both!_**
@@ -37,13 +42,15 @@ There's also [links](https://www.freecodecamp.com), and
 And if you want to get really crazy, even tables:
 
 Wild Header | Crazy Header | Another Header?
------------- | ------------- | ------------- 
+------------|:------------:| -------------| 
 Your content can | be here, and it | can be here....
 And here. | Okay. | I think we get it.
 
+
+
 - And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
+    - Some are bulleted.
+        - With different indentation levels.
         - That look like this.
 
 
@@ -55,22 +62,22 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 
-        </textarea>
-    <div id="preview"></div>
+</textarea>  
+</div>
+
+<div id="preview"></div>
+</div>
+
+
+
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script>
-        let text = document.getElementById('editor');
-        text.addEventListener("input", function getValue() {
-            document.getElementById('preview').innerHTML =
-                marked(text.value);
-        })
-
-        let test = text.textContent;
-        console.log(test)
-        document.getElementById('preview').innerHTML =
-            marked(test);
-    </script>
+    <script src="markdown.js"></script>
 </body>
-
 </html>
