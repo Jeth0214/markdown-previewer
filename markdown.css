@@ -72,7 +72,6 @@ body {
 .container #editor {
     margin-top: 30px;
     border: 1px solid #ddd;
-    border-radius: 3px;
     width: 460px;
     display: inline-block;
     vertical-align: top;
@@ -82,9 +81,11 @@ body {
     padding: 10px;
 }
 
+textarea:focus {
+    outline: none;
+}
 .container #preview {
     border: 1px solid #ddd;
-    border-radius: 3px;
     width: 460px;
     display: inline-block;
     vertical-align: top;
