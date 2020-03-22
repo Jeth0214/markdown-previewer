@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Markdown Previewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="markdown.css">
+    
 </head>
 
 <body>
+
+<header class="text-center">
+    <h1>Markdown Previewer</h1>
+</header>
+
 <div class="container">
 
-<div>
-
+ <!--Editor Section-->   
+<div class="title"><i class="far fa-edit"></i> <span>Editor</span></div>
 <textarea name="editor" id="editor">
 # Welcome to my React Markdown Previewer!
 
@@ -61,13 +70,18 @@ And here. | Okay. | I think we get it.
 * And last but not least, let's not forget embedded images:
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
-
 </textarea>  
+
+<!--preview section-->
+
+    <div class="title"><i class="far fa-eye"></i><span>Preview</span></div>
+    <div id="preview"></div>
+
 </div>
 
-<div id="preview"></div>
+<div class="text-center">
+    <p>by <a href="https://codepen.io/jeth0214/" target="_blank" rel="noopener noreferrer">Jeth0214</a></p>
 </div>
-
 
 
 

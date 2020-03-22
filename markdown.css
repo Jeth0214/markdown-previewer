@@ -1,20 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 * , body{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    
 }
 
 body {
     background-color: rgb(230, 236, 236);
+    position: relative;
+    color: #333;
+    background-color: #444;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+
+.text-center {
+    margin: 20px;
+    padding: 10px 0;
+    color: #f7f7f7;
+    text-align: center;
+}
+
+.text-center a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .container {
-    display: flex;
-    max-width: 90%;
-    margin: 100px auto;
-    height: 500px;
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    max-width: 980px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    background-color: #fff;
     background-color: #f7f7f7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -22,16 +47,75 @@ body {
     border-radius: 10px;
 }
 
-#editor {
-    height: 100%;
-    padding: 20px;
+.title {
+    position: absolute;
+    border: 2px solid rgb(141, 137, 137);
+    display: inline-block;
+    height: 30px;
+    width: 460px;
+    margin: 0;
+    background-color: rgb(122, 149, 150);
 }
 
-#preview {
+.title i {
+    height: 25px;
+    position: absolute;
+    left: 20px;
+    top: 4px;
+}
+.title span {
+    margin-left: 45px;
+    color: #f7f1f1;
+}
+
+
+.container #editor {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 460px;
+    display: inline-block;
+    vertical-align: top;
     overflow: auto;
-    background-color: #ffffff;
+    resize: none;
+    height: 756px;
+    padding: 10px;
 }
 
+.container #preview {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 460px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: auto;
+    margin-top: 30px;
+    padding: 10px;
+    height: 756px;
+    background-color: rgb(233, 233, 220);
+}
+
+/* for tablet and mobile */
+@media screen and (max-width: 768px){
+    .container .title {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .container #editor {
+        margin: 0 auto 10px;
+        width: 100%;
+        
+    }
+
+    .container #preview {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+/* markdown style */
 table {
     border-collapse: collapse;
   }
@@ -41,4 +125,26 @@ table {
     padding: 5px;
   }
 
+  code {
+    background-color: #fff;
+    padding: 1px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
 
+  blockquote {
+    border-left: 3px solid #224B4B;
+    color: #224B4B;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+
+  pre {
+    background: white;
+    padding: 5px 0 5px 5px;
+  }
+
+  ul, ol{
+      margin: 15px;
+  }
